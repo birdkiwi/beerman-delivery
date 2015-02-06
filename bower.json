@@ -1,0 +1,28 @@
+{
+  "name": "beerman-delivery",
+  "version": "0.0.0",
+  "authors": [
+    "Bird Kiwi"
+  ],
+  "description": "beerman delivery html template",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.2",
+    "jquery-validate": "~1.13.1",
+    "jquery.inputmask": "~3.1.57",
+    "lesshat": "~3.0.2",
+    "fotorama": "~4.6.3",
+    "jquery.countdown": "~2.0.4",
+    "jquery-animatenumber": "~0.0.10",
+    "Stickyfill": "~1.1.1",
+    "nanoscroller": "~0.8.4"
+  }
+}
