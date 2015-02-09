@@ -8,280 +8,195 @@
     <meta name="viewport" content="width=1200" />
 </head>
 <body>
-<div class="main-wrapper">
 <header class="main-header clearfix js-sticky sticky">
-    <div class="main-header-home">
-        <a href="http://beerman.ru" title="Перейти на главный сайт beerman.ru"></a>
-    </div>
-    <div class="main-header-logo">
-        <a href="index.html">
-            <img src="images/logo.png" alt="Beerman пивные рестораны" /><br/>
-            Бесплатная доставка блюд из ресторанов Beerman
-        </a>
-    </div>
-    <div class="main-header-car">
-        <img src="images/beerman-auto.png" width="121" height="56" alt=""/>
-    </div>
-    <div class="main-header-phone">
-        <a href="tel:+7(383)367-1-367"><span>361-1-367</span></a>
-    </div>
-    <div class="main-header-additional-links">
-        <a href="#">Условия доставки</a>
-    </div>
-    <div class="main-header-buttons">
-        <a href="#sidebar-menu" class="menu-button active" data-tab=".sidebar-tabs">
-            <i class="bm-icon bm-icon-menubook"></i> Меню
-        </a>
-        <a href="#sidebar-cart" class="cart-button js-main-cart" data-tab=".sidebar-tabs">
-            <div class="main-cart">
-                    <span class="main-cart-icon">
-                        <span class="main-cart-quantity">20</span>
-                    </span>
-                    <span class="main-cart-price js-main-cart-price">
-                        <span data-animate-number="1365" data-animate-number-speed="1200">0</span> ₽
-                    </span>
-            </div>
-        </a>
+    <div class="main-wrapper">
+        <div class="main-header-home">
+            <a href="http://beerman.ru" title="Перейти на главный сайт beerman.ru"></a>
+        </div>
+        <div class="main-header-logo">
+            <a href="index.html">
+                <img src="images/logo.png" alt="Beerman пивные рестораны" /><br/>
+                Бесплатная доставка блюд из ресторанов Beerman
+            </a>
+        </div>
+        <div class="main-header-car">
+            <img src="images/beerman-auto.png" width="121" height="56" alt=""/>
+        </div>
+        <div class="main-header-phone">
+            <a href="tel:+7(383)367-1-367"><span>361-1-367</span></a>
+        </div>
+        <div class="main-header-additional-links">
+            <a href="#">Условия доставки</a>
+        </div>
+        <div class="main-header-buttons">
+            <a href="#sidebar-menu" class="menu-button" data-tab=".sidebar-tabs">
+                <i class="bm-icon bm-icon-menubook"></i> Меню
+            </a>
+            <a href="#sidebar-cart" class="cart-button js-main-cart active" data-tab=".sidebar-tabs">
+                <div class="main-cart">
+                        <span class="main-cart-icon">
+                            <span class="main-cart-quantity">20</span>
+                        </span>
+                        <span class="main-cart-price js-main-cart-price">
+                            <span data-animate-number="1365" data-animate-number-speed="1200">0</span> ₽
+                        </span>
+                </div>
+            </a>
+        </div>
     </div>
 </header>
+<div class="main-wrapper">
+    <div class="main-content main-content-blank">
+        <h1 class="main-content-title">Оформление заказа</h1>
 
-<div class="main-content main-content-blank">
-    <h1 class="main-content-title">Оформление заказа</h1>
-
-    <form action="#" class="form-horizontal order-form js-validate">
-        <div class="form-group">
-            <label for="order-field-persons" class="control-label">Количество персон</label>
-            <div class="col-xs-5">
-                <input id="order-field-persons" type="text" name="persons" class="form-control" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="order-field-name" class="control-label">Ваше имя</label>
-            <div class="col-xs-5">
-                <input id="order-field-name" type="text" name="name" class="form-control" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="order-field-phone" class="control-label">Телефон <span class="text-danger">*</span></label>
-            <div class="col-xs-5">
-                <input id="order-field-phone" type="text" name="phone" class="form-control" data-masked-input="+7 (999) 999-99-99" placeholder="+7 (___) ___-__-__" required />
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="order-field-email" class="control-label">E-mail</label>
-            <div class="col-xs-5">
-                <input id="order-field-email" type="email" name="email" class="form-control" />
-            </div>
-        </div>
-        <div class="form-group">
-            <label class="control-label">Когда доставить</label>
-
-            <div class="col-xs-6">
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="time_type" value="asap" checked>
-                        В ближайщее время
-                    </label>
-                </div>
-                <div class="radio">
-                    <label>
-                        <input type="radio" name="time_type" value="time">
-                        Выбрать дату и время
-                    </label>
+        <form action="#" class="form-horizontal order-form js-validate">
+            <div class="form-group">
+                <label for="order-field-name" class="control-label">Ваше имя</label>
+                <div class="col-xs-5">
+                    <input id="order-field-name" type="text" name="name" class="form-control" />
                 </div>
             </div>
-
-            <div class="col-xs-5 hide">
-                <div class="row">
-                    <div class="col-xs-8">
-                        <input type="text" name="date" class="form-control" placeholder="Дата" />
-                    </div>
-                    <div class="col-xs-4">
-                        <input type="text" name="time" class="form-control" placeholder="Время" />
+            <div class="form-group">
+                <label for="order-field-phone" class="control-label">Телефон <span class="text-danger">*</span></label>
+                <div class="col-xs-5">
+                    <input id="order-field-phone" type="text" name="phone" class="form-control" data-masked-input="+7 (999) 999-99-99" placeholder="+7 (___) ___-__-__" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="order-field-email" class="control-label">E-mail</label>
+                <div class="col-xs-5">
+                    <input id="order-field-email" type="email" name="email" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label">Количество персон</label>
+                <div class="col-xs-5">
+                    <div class="bm-quantity-changer" data-quantity-changer>
+                        <span class="bm-quantity-changer-minus" data-quantity-changer-minus></span>
+                        <input type="text" name="persons" class="bm-quantity-changer-input" value="1" autocomplete="off" />
+                        <span class="bm-quantity-changer-plus" data-quantity-changer-plus></span>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="order-field-address" class="control-label">Адрес доставки <span class="text-danger">*</span></label>
-            <div class="col-xs-4">
-                <input id="order-field-address" type="text" name="address" class="form-control" required placeholder="Улица" />
-            </div>
-            <div class="col-xs-2">
-                <input type="text" name="house" class="form-control" placeholder="дом" />
-            </div>
-            <div class="col-xs-2">
-                <input type="text" name="flat" class="form-control" placeholder="кв" />
-            </div>
-        </div>
-        <div class="clearfix">
-            <label class="control-label">&nbsp;</label>
-            <div class="col-xs-8">
-                <div class="alert alert-danger" role="alert">
-                    Cумма заказа при доставке в ваш район должна быть больше <b>1500 руб</b>.
-                    Пожалуйста <a href="#">закажите</a> еще что-нибудь. Кстати у нас неплохие <a href="#">десерты</a>.
-                </div>
-            </div>
-        </div>
-        <div class="form-group">
-            <label for="order-field-comment" class="control-label">Примечание</label>
-            <div class="col-xs-8">
-                <textarea name="comment" rows="3" id="order-field-comment" class="form-control"></textarea>
-            </div>
-        </div>
+            <div class="form-group">
+                <label class="control-label">Когда доставить</label>
 
-        <div class="form-group">
-            <label class="control-label">&nbsp;</label>
-            <div class="col-xs-8">
-                <input type="submit" value="Отправить заказ" class="btn btn-success btn-lg" />
-                <span class="order-form-required-desc"><span class="text-danger">*</span> Обязательно укажите телефон и адрес</span>
-            </div>
-        </div>
-    </form>
-</div><!-- /.main-content -->
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="time_type" value="asap" checked autocomplete="off">
+                                В ближайщее время
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="time_type" value="time" autocomplete="off">
+                                Выбрать дату и время
+                            </label>
+                        </div>
+                    </div>
 
-<aside class="main-sidebar">
-    <div class="main-sidebar-menu main-menu sidebar-tabs active js-nano" id="sidebar-menu">
-        <div class="js-nano-content">
-            <ul class="list-unstyled">
-                <li><a href="#"><i class="bm-icon bm-icon-menu-pizza"></i> Пицца</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-cookies"></i> Завтраки</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-pelmeni"></i> Полуфабрикаты</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-sushi"></i> Суши и роллы</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-salads"></i> Салаты и холодные закуски</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-tacco"></i> Горячие закуски</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-soup"></i> Супы</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-pasta"></i> Паста и лапша</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-rise"></i> Рис</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-fish"></i> Рыба и морепродукты</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-steak"></i> Мясо</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-mushroom"></i> Гарниры</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-chilly"></i> Соусы</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-cupcake"></i> Десерты</a></li>
-                <li><a href="#"><i class="bm-icon bm-icon-menu-hotcup"></i> Напитки</a></li>
-            </ul>
-        </div>
-    </div><!-- /.main-menu -->
-    <div class="main-sidebar-cart sidebar-tabs js-nano" id="sidebar-cart">
-        <div class="main-sidebar-cart-summary">
-            <a href="#" class="btn btn-success">Оформить</a>
-            20 блюд на 11&thinsp;365 руб.
-            <div class="main-sidebar-cart-summary-desc">Мин. заказ: 1&thinsp;000 руб.</div>
-        </div>
-        <div class="js-nano-content">
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Фокачча с сыром пармезан и соусом песто</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off"
-                           value="5" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
+                    <input id="order-time-chooser" type="text" name="date" class="form-control" placeholder="Дата" style="display:none;" data-date-input="true" />
                 </div>
-                <div class="main-sidebar-cart-price">210 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
             </div>
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Сендвич с курицей и маринованными огурцами</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off" value="1" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
+            <div class="form-group">
+                <label for="order-field-address" class="control-label">Адрес доставки <span class="text-danger">*</span></label>
+                <div class="col-xs-4">
+                    <input id="order-field-address" type="text" name="address" class="form-control" required placeholder="Улица" />
                 </div>
-                <div class="main-sidebar-cart-price">210 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
+                <div class="col-xs-2">
+                    <input type="text" name="house" class="form-control" placeholder="дом" />
+                </div>
+                <div class="col-xs-2">
+                    <input type="text" name="flat" class="form-control" placeholder="кв" />
+                </div>
             </div>
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Салат из авокадо и печеного перца</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off" value="1" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
+            <div class="clearfix">
+                <label class="control-label">&nbsp;</label>
+                <div class="col-xs-8">
+                    <div class="alert alert-danger" role="alert">
+                        Cумма заказа при доставке в ваш район должна быть больше <b>1500 руб</b>.
+                        Пожалуйста <a href="#">закажите</a> еще что-нибудь. Кстати у нас неплохие <a href="#">десерты</a>.
+                    </div>
                 </div>
-                <div class="main-sidebar-cart-price">210 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
             </div>
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Салат с киноа и томатами</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off" value="1" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
+            <div class="form-group">
+                <label for="order-field-comment" class="control-label">Примечание</label>
+                <div class="col-xs-8">
+                    <textarea name="comment" rows="3" id="order-field-comment" class="form-control"></textarea>
                 </div>
-                <div class="main-sidebar-cart-price">210 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
             </div>
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Салат с киноа и томатами</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off" value="1" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
+
+            <div class="form-group">
+                <label class="control-label">&nbsp;</label>
+                <div class="col-xs-8">
+                    <input type="submit" value="Отправить заказ" class="btn btn-success btn-lg" />
+                    <span class="order-form-required-desc"><span class="text-danger">*</span> Обязательно укажите телефон и адрес</span>
                 </div>
-                <div class="main-sidebar-cart-price">210 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
             </div>
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Салат с киноа и томатами</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off" value="1" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
-                </div>
-                <div class="main-sidebar-cart-price">210 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
+        </form>
+    </div><!-- /.main-content -->
+
+    <aside class="main-sidebar">
+        <div class="main-sidebar-menu main-menu sidebar-tabs js-nano" id="sidebar-menu">
+            <div class="js-nano-content">
+                <ul class="list-unstyled">
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-pizza"></i> Пицца</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-cookies"></i> Завтраки</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-pelmeni"></i> Полуфабрикаты</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-sushi"></i> Суши и роллы</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-salads"></i> Салаты и холодные закуски</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-tacco"></i> Горячие закуски</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-soup"></i> Супы</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-pasta"></i> Паста и лапша</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-rise"></i> Рис</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-fish"></i> Рыба и морепродукты</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-steak"></i> Мясо</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-mushroom"></i> Гарниры</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-chilly"></i> Соусы</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-cupcake"></i> Десерты</a></li>
+                    <li><a href="#"><i class="bm-icon bm-icon-menu-hotcup"></i> Напитки</a></li>
+                </ul>
             </div>
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Салат с киноа и томатами</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off" value="1" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
+        </div><!-- /.main-menu -->
+        <div class="main-sidebar-cart sidebar-tabs active js-nano" id="sidebar-cart">
+            <div class="js-nano-content">
+                <div class="main-sidebar-cart-change">
+                    <a href="#" class="btn btn-info btn-block btn-lg">Изменить содержимое заказа</a>
                 </div>
-                <div class="main-sidebar-cart-price">210 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
-            </div>
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Салат с киноа и томатами</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off" value="1" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
+                <div class="main-sidebar-cart-subtotal">
+                    20 блюд на 11&thinsp;365 ₽
                 </div>
-                <div class="main-sidebar-cart-price">210 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
-            </div>
-            <div class="main-sidebar-cart-item">
-                <h4 class="main-sidebar-cart-title">
-                    <a href="#">Салат с киноа и томатами</a>
-                </h4>
-                <div class="main-sidebar-cart-quantity">
-                    <a href="#" class="main-sidebar-cart-quantity-minus"></a>
-                    <input type="text" class="main-sidebar-cart-quantity-input" name="quantity" autocomplete="off" value="10" />
-                    <a href="#" class="main-sidebar-cart-quantity-plus"></a>
+                <div class="main-sidebar-cart-item">
+                    <h4 class="main-sidebar-cart-title">
+                        <a href="#">Фокачча с сыром пармезан и соусом песто</a>
+                    </h4>
+                    <div class="main-sidebar-cart-price">1&thinsp;210 ₽ <span class="main-sidebar-cart-times">&times;</span> 2 <small>шт</small></div>
                 </div>
-                <div class="main-sidebar-cart-price">230 ₽</div>
-                <a href="#" class="main-sidebar-cart-delete"></a>
+                <div class="main-sidebar-cart-item">
+                    <h4 class="main-sidebar-cart-title">
+                        <a href="#">Сендвич с курицей и маринованными огурцами</a>
+                    </h4>
+                    <div class="main-sidebar-cart-price">820 ₽ <span class="main-sidebar-cart-times">&times;</span> 1 <small>шт</small></div>
+                </div>
             </div>
         </div>
-    </div>
-</aside><!-- /.main-sidebar -->
-</div>
+    </aside><!-- /.main-sidebar -->
+</div><!-- /.main-wrapper -->
 <script src="build/script.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $('input[name="time_type"]').click(function(){
+            var currValue = $(this).val();
+            console.log(currValue);
+            if (currValue == 'time') {
+                $('#order-time-chooser').show();
+            } else {
+                $('#order-time-chooser').hide();
+            }
+        });
+    });
+</script>
 </body>
 </html>

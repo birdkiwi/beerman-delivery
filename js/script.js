@@ -47,6 +47,41 @@ function initBuyButtons(element) {
     });
 }
 
+function initQuantityChangers(element) {
+    element.each(function(){
+        var input = $(this).find('input');
+        var plusButton = $(this).find('[data-quantity-changer-plus]');
+        var minusButton = $(this).find('[data-quantity-changer-minus]');
+
+        plusButton.click(function() {
+            var currentVal = +input.val();
+            console.log(currentVal);
+            input.val(currentVal+1);
+        });
+
+        minusButton.click(function() {
+            var currentVal = +input.val();
+            console.log(currentVal);
+            if (currentVal > 0) {
+                input.val(currentVal-1);
+            }
+        });
+
+        input.click(function() {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active');
+                $(this).parent().addClass('is-input-active');
+                $(this).select();
+
+                $(this).on('blur', function(){
+                    $(this).removeClass('active');
+                    $(this).parent().removeClass('is-input-active');
+                });
+            }
+        })
+    });
+}
+
 function initContentModal() {
     $('.main-content').append('<div class="main-content-modal"><div class="main-content-modal-inner"></div></div>');
     $('.main-content-modal').height($(window).height() - 80);
@@ -102,14 +137,17 @@ $(document).on('click', '[data-quantity-change]', function() {
     if (operator == 'plus') {
         quantityInput.val(currentQuantity+1);
     } else if (operator == 'minus') {
-        quantityInput.val(currentQuantity-1);
+        if (currentQuantity > 0) {
+            quantityInput.val(currentQuantity-1);
+        }
     }
 });
 
 $(document).ready(function(){
     countDownInit( $('[data-countdowntimer]') );
     animateNumberInit( $('[data-animate-number]') );
-    initBuyButtons($('[data-buy-button]'));
+    initBuyButtons( $('[data-buy-button]') );
+    initQuantityChangers( $('[data-quantity-changer]') );
     initContentModal();
 
     $('.js-sticky').Stickyfill();
@@ -157,6 +195,20 @@ $(document).ready(function(){
         }
 
         return false;
+    });
+
+    $('[data-date-input]').each(function() {
+        $(this).appendDtpicker({
+            "locale": "ru",
+            "closeOnSelected": true,
+            "firstDayOfWeek": 1,
+            'minuteInterval' : 30,
+            "futureOnly": true,
+            "minTime":"08:30",
+            "maxTime":"19:15",
+            "calendarMouseScroll": false,
+            "autodateOnStart": true
+        });
     });
 });
 

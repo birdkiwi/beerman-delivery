@@ -6,8 +6,11 @@
 @import "bootstrap-override/customizations.less";
 @import "../build/sprites-vars.less";
 @import "../build/sprites.less";
+@import "menu-icons.less";
 @import (inline) "../bower_components/fotorama/fotorama.css";
 @import "fotorama-override.less";
+@import (inline) "../bower_components/jquery-simple-datetimepicker/jquery.simple-dtpicker.css";
+@import "datepicker-override.less";
 @import "../bower_components/nanoscroller/bin/css/nanoscroller.less";
 @import "nanoscroller-override.less";
 
@@ -28,9 +31,10 @@ label {
 
 .main-wrapper {
   background: #ffffff;
-  border-right: 1px solid #f8f8f8;
+  border-right: 1px solid #e5e5e5;
+  .box-sizing(content-box);
   position: relative;
-  width: 1160 + 2px;
+  width: 1162 + 2px;
   .center-block();
   .clearfix();
 }
@@ -68,6 +72,8 @@ label {
 
   .main-wrapper {
     background: #f8f8f8;
+    border-right: 0;
+    height: 79px;
   }
 
   &-home {
@@ -183,8 +189,10 @@ label {
   }
 
   &-buttons {
+    position: relative;
+    right: -2px;
     float: right;
-    width: 300px;
+    width: 304px;
 
     a {
       display: block;
@@ -192,13 +200,14 @@ label {
       .ff-pt-sans-narrow;
       line-height: 80px;
       padding: 0 5px;
-      width: 50%;
+      width: 150px;
       text-align: center;
       border-left: 1px solid transparent;
       border-right: 1px solid transparent;
       border-bottom: 1px solid #e5e5e5;
       color: @c-main-text;
       font-size: 18px;
+      .box-sizing(content-box);
 
       &:hover {
         color: @c-main-text-hover;
@@ -225,11 +234,11 @@ label {
     }
 
     .menu-button {
-      width: 45%;
+      width: 130px;
     }
 
     .cart-button {
-      width: 55%;
+      width: 149px;
     }
 
     .bm-icon {
@@ -286,32 +295,38 @@ label {
       &:last-child {
         margin-bottom: 0;
       }
-    }
-  }
 
-  a {
-    color: #362c26;
-    line-height: 28px;
+      a {
+        color: #362c26;
+        line-height: 28px;
 
-    &:hover,
-    &:active,
-    &:focus {
-      text-decoration: none;
-    }
+        &:hover,
+        &:active,
+        &:focus {
+          text-decoration: none;
+        }
 
-    &:hover {
-      color: #6a554f;
-    }
+        &:hover {
+          color: #6a554f;
+        }
 
-    &.active,
-    &:active {
-      color: #dd2a1b;
-    }
+        &.active,
+        &:active {
+          color: #dd2a1b;
+        }
 
-    .bm-icon {
-      position: relative;
-      top: 6px;
-      margin-right: 12px;
+        .bm-icon {
+          position: relative;
+          top: 6px;
+          margin-right: 12px;
+        }
+      }
+
+      &.active {
+        a {
+          color: #dd2a1b;
+        }
+      }
     }
   }
 }
@@ -383,6 +398,10 @@ label {
 .bm-card-slider {
   padding: 0;
   overflow: hidden;
+
+  .fotorama__stage {
+    .border-radius(3px);
+  }
 
   &-item {
     &-photo {
@@ -484,6 +503,7 @@ label {
 
 .bm-product-card {
   position: relative;
+  height: 380px;
 
   &-image {
     position: relative;
@@ -627,6 +647,7 @@ label {
     text-align: center;
     border: none;
     border: 1px solid transparent;
+    color: #fff;
 
     &.active {
       background: #ffffff;
@@ -647,11 +668,12 @@ label {
 
 .main-content {
   float: left;
-  width: 860px;
+  width: 863px;
   padding: 30px;
   background-color: @c-main-brown;
   background-attachment: fixed;
   position: relative;
+  border-right: 1px solid #e5e5e5;
 
   &-blank {
     background: #ffffff;
@@ -814,12 +836,11 @@ label {
   position: fixed;
   width: 300px;
   height: 100%;
-  margin-left: 280px;
+  margin-left: 282px;
   left: 50%;
   top: 0;
   padding-top: 80px;
   background: #ffffff;
-  border-left: 1px solid #e5e5e5;
 
   .sidebar-tabs {
     display: none;
@@ -831,15 +852,39 @@ label {
   }
 
   &-cart {
-
     .js-nano-content {
-      top: 100px;
+      top: 30px;
+      margin-bottom: 90px;
+    }
+
+    .js-nano-pane {
+      z-index: 110;
+    }
+
+    &-change {
+      width: 300px;
+      position: fixed;
+      z-index: 100;
+      bottom: 0;
+      height: 80px;
+      padding: 20px 25px;
+    }
+
+    &-subtotal {
+      font-size: 32px;
+      padding: 0 20px 25px;
+      .ff-pt-sans-narrow;
+      border-bottom: 1px solid #e5e5e5;
+      margin-bottom: 15px;
     }
 
     &-summary {
+      width: 300px;
+      position: fixed;
+      z-index: 100;
+      bottom: 0;
       background: #f5f4ee;
       padding: 20px 25px;
-      margin-bottom: 20px;
       height: 80px;
       font-size: 16px;
       .ff-pt-sans-narrow;
@@ -943,9 +988,18 @@ label {
       }
     }
 
+    &-times {
+      padding: 0 7px;
+    }
+
     &-price {
       font-size: 20px;
       float: left;
+
+      small {
+        font-size: 14px;
+        color: @c-dirty-1;
+      }
     }
 
     &-delete {

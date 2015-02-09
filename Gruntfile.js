@@ -40,6 +40,7 @@ module.exports = function(grunt) {
                     'bower_components/spin.js/spin.js',
                     'bower_components/spin.js/jquery.spin.js',
                     'bower_components/Stickyfill/dist/stickyfill.js',
+                    'bower_components/jquery-simple-datetimepicker/jquery.simple-dtpicker.js',
                     'bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.js',
                     'js/script.js'
                 ],

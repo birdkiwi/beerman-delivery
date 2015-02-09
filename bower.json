@@ -23,6 +23,7 @@
     "jquery.countdown": "~2.0.4",
     "jquery-animatenumber": "~0.0.10",
     "Stickyfill": "~1.1.1",
-    "nanoscroller": "~0.8.4"
+    "nanoscroller": "~0.8.4",
+    "jquery-simple-datetimepicker": "~1.12.0"
   }
 }
