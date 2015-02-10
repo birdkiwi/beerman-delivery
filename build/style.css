@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,400italic,700,700italic&subset=latin,cyrillic);
+@import url(http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700|PT+Serif:400,400italic,700,700italic&subset=all);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -1370,10 +1370,10 @@ a.bg-warning:hover {
   background-color: #f7ecb5;
 }
 .bg-danger {
-  background-color: #f2dede;
+  background-color: #ffe6e7;
 }
 a.bg-danger:hover {
-  background-color: #e4b9b9;
+  background-color: #ffb3b6;
 }
 .page-header {
   padding-bottom: 9px;
@@ -2396,14 +2396,14 @@ table th[class*="col-"] {
 .table > thead > tr.danger > th,
 .table > tbody > tr.danger > th,
 .table > tfoot > tr.danger > th {
-  background-color: #f2dede;
+  background-color: #ffe6e7;
 }
 .table-hover > tbody > tr > td.danger:hover,
 .table-hover > tbody > tr > th.danger:hover,
 .table-hover > tbody > tr.danger:hover > td,
 .table-hover > tbody > tr:hover > .danger,
 .table-hover > tbody > tr.danger:hover > th {
-  background-color: #ebcccc;
+  background-color: #ffcccf;
 }
 .table-responsive {
   overflow-x: auto;
@@ -2869,7 +2869,7 @@ select[multiple].form-group-lg .form-control {
 .has-error .input-group-addon {
   color: #dd2a1b;
   border-color: #dd2a1b;
-  background-color: #f2dede;
+  background-color: #ffe6e7;
 }
 .has-error .form-control-feedback {
   color: #dd2a1b;
@@ -3167,8 +3167,8 @@ fieldset[disabled] .btn-success.active {
 }
 .btn-info {
   color: #ffffff;
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #a49993;
+  border-color: #988c85;
 }
 .btn-info:hover,
 .btn-info:focus,
@@ -3177,8 +3177,8 @@ fieldset[disabled] .btn-success.active {
 .btn-info.active,
 .open > .dropdown-toggle.btn-info {
   color: #ffffff;
-  background-color: #31b0d5;
-  border-color: #269abc;
+  background-color: #8d7f77;
+  border-color: #7a6d67;
 }
 .btn-info:active,
 .btn-info.active,
@@ -3203,11 +3203,11 @@ fieldset[disabled] .btn-info:active,
 .btn-info.disabled.active,
 .btn-info[disabled].active,
 fieldset[disabled] .btn-info.active {
-  background-color: #5bc0de;
-  border-color: #46b8da;
+  background-color: #a49993;
+  border-color: #988c85;
 }
 .btn-info .badge {
-  color: #5bc0de;
+  color: #a49993;
   background-color: #ffffff;
 }
 .btn-warning {
@@ -4986,12 +4986,12 @@ a.thumbnail.active {
   color: #66512c;
 }
 .alert-danger {
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  background-color: #ffe6e7;
+  border-color: #ffccd7;
   color: #dd2a1b;
 }
 .alert-danger hr {
-  border-top-color: #e4b9c0;
+  border-top-color: #ffb3c3;
 }
 .alert-danger .alert-link {
   color: #b02115;
@@ -5272,7 +5272,7 @@ a.list-group-item-warning.active:focus {
 }
 .list-group-item-danger {
   color: #dd2a1b;
-  background-color: #f2dede;
+  background-color: #ffe6e7;
 }
 a.list-group-item-danger {
   color: #dd2a1b;
@@ -5283,7 +5283,7 @@ a.list-group-item-danger .list-group-item-heading {
 a.list-group-item-danger:hover,
 a.list-group-item-danger:focus {
   color: #dd2a1b;
-  background-color: #ebcccc;
+  background-color: #ffcccf;
 }
 a.list-group-item-danger.active,
 a.list-group-item-danger.active:hover,
@@ -5623,22 +5623,22 @@ a.list-group-item-danger.active:focus {
   border-bottom-color: #faebcc;
 }
 .panel-danger {
-  border-color: #ebccd1;
+  border-color: #ffccd7;
 }
 .panel-danger > .panel-heading {
   color: #dd2a1b;
-  background-color: #f2dede;
-  border-color: #ebccd1;
+  background-color: #ffe6e7;
+  border-color: #ffccd7;
 }
 .panel-danger > .panel-heading + .panel-collapse > .panel-body {
-  border-top-color: #ebccd1;
+  border-top-color: #ffccd7;
 }
 .panel-danger > .panel-heading .badge {
-  color: #f2dede;
+  color: #ffe6e7;
   background-color: #dd2a1b;
 }
 .panel-danger > .panel-footer + .panel-collapse > .panel-body {
-  border-bottom-color: #ebccd1;
+  border-bottom-color: #ffccd7;
 }
 .embed-responsive {
   position: relative;
@@ -6683,277 +6683,367 @@ Icon classes can be used entirely standalone. They are named after their origina
 */
 .bm-icon-alert {
   background-image: url(spritesheet.png);
-  background-position: -200px -108px;
+  background-position: -162px -168px;
   width: 26px;
   height: 26px;
 }
 .bm-icon-cartbag {
   background-image: url(spritesheet.png);
-  background-position: -96px -72px;
+  background-position: -105px 0px;
   width: 30px;
   height: 32px;
 }
 .bm-icon-close-gray:hover {
   background-image: url(spritesheet.png);
-  background-position: -200px -159px;
+  background-position: -135px -195px;
   width: 25px;
   height: 25px;
 }
 .bm-icon-close-gray {
   background-image: url(spritesheet.png);
-  background-position: -200px -134px;
+  background-position: -208px -108px;
   width: 25px;
   height: 25px;
 }
 .bm-icon-delete-gray:hover {
   background-image: url(spritesheet.png);
-  background-position: -56px -186px;
+  background-position: -189px -162px;
   width: 16px;
   height: 16px;
 }
 .bm-icon-delete-gray {
   background-image: url(spritesheet.png);
-  background-position: -40px -186px;
+  background-position: -108px -222px;
   width: 16px;
   height: 16px;
 }
 .bm-icon-homepage:active {
   background-image: url(spritesheet.png);
-  background-position: 0px -72px;
+  background-position: -73px 0px;
   width: 32px;
   height: 32px;
 }
 .bm-icon-homepage:hover {
   background-image: url(spritesheet.png);
-  background-position: -32px -72px;
+  background-position: -73px -32px;
   width: 32px;
   height: 32px;
 }
 .bm-icon-homepage {
   background-image: url(spritesheet.png);
-  background-position: -64px -72px;
+  background-position: -73px -64px;
   width: 32px;
   height: 32px;
 }
+.bm-icon-menu-chilly:active {
+  background-image: url(spritesheet.png);
+  background-position: -135px 0px;
+  width: 27px;
+  height: 27px;
+}
 .bm-icon-menu-chilly:hover {
   background-image: url(spritesheet.png);
-  background-position: -86px -104px;
+  background-position: -105px -87px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-chilly {
   background-image: url(spritesheet.png);
-  background-position: -113px -104px;
+  background-position: -137px -27px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-cookies:active {
+  background-image: url(spritesheet.png);
+  background-position: -73px -123px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-cookies:hover {
   background-image: url(spritesheet.png);
-  background-position: -146px 0px;
+  background-position: 0px -144px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-cookies {
   background-image: url(spritesheet.png);
-  background-position: -146px -27px;
+  background-position: -132px -60px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-cupcake:active {
+  background-image: url(spritesheet.png);
+  background-position: -27px -144px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-cupcake:hover {
   background-image: url(spritesheet.png);
-  background-position: -146px -54px;
+  background-position: -100px -114px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-cupcake {
   background-image: url(spritesheet.png);
-  background-position: -146px -81px;
+  background-position: -132px -87px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-fish:active {
+  background-image: url(spritesheet.png);
+  background-position: -54px -150px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-fish:hover {
   background-image: url(spritesheet.png);
-  background-position: 0px -132px;
+  background-position: -162px 0px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-fish {
   background-image: url(spritesheet.png);
-  background-position: -27px -132px;
+  background-position: -164px -27px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-hotcup:active {
+  background-image: url(spritesheet.png);
+  background-position: -159px -54px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-hotcup:hover {
   background-image: url(spritesheet.png);
-  background-position: -54px -132px;
+  background-position: -81px -150px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-hotcup {
   background-image: url(spritesheet.png);
-  background-position: -81px -132px;
+  background-position: -127px -114px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-mushroom:active {
+  background-image: url(spritesheet.png);
+  background-position: 0px -171px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-mushroom:hover {
   background-image: url(spritesheet.png);
-  background-position: -108px -132px;
+  background-position: -27px -171px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-mushroom {
   background-image: url(spritesheet.png);
-  background-position: -135px -132px;
+  background-position: -108px -141px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-pasta:active {
+  background-image: url(spritesheet.png);
+  background-position: -159px -81px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-pasta:hover {
   background-image: url(spritesheet.png);
-  background-position: -173px 0px;
+  background-position: -54px -177px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-pasta {
   background-image: url(spritesheet.png);
-  background-position: -173px -27px;
+  background-position: -189px 0px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-pelmeni:active {
+  background-image: url(spritesheet.png);
+  background-position: -154px -114px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-pelmeni:hover {
   background-image: url(spritesheet.png);
-  background-position: -173px -54px;
+  background-position: -191px -27px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-pelmeni {
   background-image: url(spritesheet.png);
-  background-position: -173px -81px;
+  background-position: -186px -54px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-pizza:active {
+  background-image: url(spritesheet.png);
+  background-position: -81px -177px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-pizza:hover {
   background-image: url(spritesheet.png);
-  background-position: -173px -108px;
+  background-position: -135px -141px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-pizza {
   background-image: url(spritesheet.png);
-  background-position: 0px -159px;
+  background-position: 0px -198px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-rise:active {
+  background-image: url(spritesheet.png);
+  background-position: -108px -168px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-rise:hover {
   background-image: url(spritesheet.png);
-  background-position: -27px -159px;
+  background-position: -27px -198px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-rise {
   background-image: url(spritesheet.png);
-  background-position: -54px -159px;
+  background-position: -186px -81px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-salads:active {
+  background-image: url(spritesheet.png);
+  background-position: -181px -108px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-salads:hover {
   background-image: url(spritesheet.png);
-  background-position: -81px -159px;
+  background-position: -54px -204px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-salads {
   background-image: url(spritesheet.png);
-  background-position: -108px -159px;
+  background-position: -162px -141px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-soup:active {
+  background-image: url(spritesheet.png);
+  background-position: -135px -168px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-soup:hover {
   background-image: url(spritesheet.png);
-  background-position: -135px -159px;
+  background-position: -216px 0px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-soup {
   background-image: url(spritesheet.png);
-  background-position: -162px -159px;
+  background-position: -81px -204px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-steak:active {
+  background-image: url(spritesheet.png);
+  background-position: -218px -27px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-steak:hover {
   background-image: url(spritesheet.png);
-  background-position: -200px 0px;
+  background-position: -213px -54px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-steak {
   background-image: url(spritesheet.png);
-  background-position: -200px -27px;
+  background-position: -108px -195px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-sushi:active {
+  background-image: url(spritesheet.png);
+  background-position: 0px -225px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-sushi:hover {
   background-image: url(spritesheet.png);
-  background-position: -200px -54px;
+  background-position: -27px -225px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-sushi {
   background-image: url(spritesheet.png);
-  background-position: -200px -81px;
+  background-position: -213px -81px;
+  width: 27px;
+  height: 27px;
+}
+.bm-icon-menu-tacco:active {
+  background-image: url(spritesheet.png);
+  background-position: -189px -135px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-tacco:hover {
   background-image: url(spritesheet.png);
-  background-position: -59px -104px;
+  background-position: -105px -60px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menu-tacco {
   background-image: url(spritesheet.png);
-  background-position: -32px -104px;
+  background-position: -73px -96px;
   width: 27px;
   height: 27px;
 }
 .bm-icon-menubook {
   background-image: url(spritesheet.png);
-  background-position: 0px -104px;
+  background-position: -105px -32px;
   width: 32px;
   height: 28px;
 }
 .bm-icon-minus-gray:hover {
   background-image: url(spritesheet.png);
-  background-position: -146px -108px;
+  background-position: -243px 0px;
   width: 20px;
   height: 20px;
 }
 .bm-icon-minus-gray {
   background-image: url(spritesheet.png);
-  background-position: -126px -72px;
+  background-position: -76px -231px;
   width: 20px;
   height: 20px;
 }
 .bm-icon-phone-red {
   background-image: url(spritesheet.png);
-  background-position: -173px -135px;
+  background-position: -54px -231px;
   width: 22px;
   height: 22px;
 }
 .bm-icon-plus-gray:hover {
   background-image: url(spritesheet.png);
-  background-position: 0px -186px;
+  background-position: -245px -20px;
   width: 20px;
   height: 20px;
 }
 .bm-icon-plus-gray {
   background-image: url(spritesheet.png);
-  background-position: -20px -186px;
+  background-position: -240px -54px;
   width: 20px;
   height: 20px;
 }
 .bm-sticker-daily {
   background-image: url(spritesheet.png);
-  background-position: -73px 0px;
+  background-position: 0px -72px;
   width: 73px;
   height: 72px;
 }
@@ -6962,6 +7052,201 @@ Icon classes can be used entirely standalone. They are named after their origina
   background-position: 0px 0px;
   width: 73px;
   height: 72px;
+}
+li > a:hover > .bm-icon-menu-pizza {
+  background-image: url(spritesheet.png);
+  background-position: -135px -141px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-cookies {
+  background-image: url(spritesheet.png);
+  background-position: 0px -144px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-pelmeni {
+  background-image: url(spritesheet.png);
+  background-position: -191px -27px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-sushi {
+  background-image: url(spritesheet.png);
+  background-position: -27px -225px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-salads {
+  background-image: url(spritesheet.png);
+  background-position: -54px -204px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-tacco {
+  background-image: url(spritesheet.png);
+  background-position: -105px -60px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-soup {
+  background-image: url(spritesheet.png);
+  background-position: -216px 0px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-pasta {
+  background-image: url(spritesheet.png);
+  background-position: -54px -177px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-rise {
+  background-image: url(spritesheet.png);
+  background-position: -27px -198px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-fish {
+  background-image: url(spritesheet.png);
+  background-position: -162px 0px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-steak {
+  background-image: url(spritesheet.png);
+  background-position: -213px -54px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-mushroom {
+  background-image: url(spritesheet.png);
+  background-position: -27px -171px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-chilly {
+  background-image: url(spritesheet.png);
+  background-position: -105px -87px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-cupcake {
+  background-image: url(spritesheet.png);
+  background-position: -100px -114px;
+  width: 27px;
+  height: 27px;
+}
+li > a:hover > .bm-icon-menu-hotcup {
+  background-image: url(spritesheet.png);
+  background-position: -81px -150px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-pizza,
+a:active > .bm-icon-menu-pizza {
+  background-image: url(spritesheet.png);
+  background-position: -81px -177px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-cookies,
+a:active > .bm-icon-menu-cookies {
+  background-image: url(spritesheet.png);
+  background-position: -73px -123px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-pelmeni,
+a:active > .bm-icon-menu-pelmeni {
+  background-image: url(spritesheet.png);
+  background-position: -154px -114px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-sushi,
+a:active > .bm-icon-menu-sushi {
+  background-image: url(spritesheet.png);
+  background-position: 0px -225px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-salads,
+a:active > .bm-icon-menu-salads {
+  background-image: url(spritesheet.png);
+  background-position: -181px -108px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-tacco,
+a:active > .bm-icon-menu-tacco {
+  background-image: url(spritesheet.png);
+  background-position: -189px -135px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-soup,
+a:active > .bm-icon-menu-soup {
+  background-image: url(spritesheet.png);
+  background-position: -135px -168px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-pasta,
+a:active > .bm-icon-menu-pasta {
+  background-image: url(spritesheet.png);
+  background-position: -159px -81px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-rise,
+a:active > .bm-icon-menu-rise {
+  background-image: url(spritesheet.png);
+  background-position: -108px -168px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-fish,
+a:active > .bm-icon-menu-fish {
+  background-image: url(spritesheet.png);
+  background-position: -54px -150px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-steak,
+a:active > .bm-icon-menu-steak {
+  background-image: url(spritesheet.png);
+  background-position: -218px -27px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-mushroom,
+a:active > .bm-icon-menu-mushroom {
+  background-image: url(spritesheet.png);
+  background-position: 0px -171px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-chilly,
+a:active > .bm-icon-menu-chilly {
+  background-image: url(spritesheet.png);
+  background-position: -135px 0px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-cupcake,
+a:active > .bm-icon-menu-cupcake {
+  background-image: url(spritesheet.png);
+  background-position: -27px -144px;
+  width: 27px;
+  height: 27px;
+}
+.active > a > .bm-icon-menu-hotcup,
+a:active > .bm-icon-menu-hotcup {
+  background-image: url(spritesheet.png);
+  background-position: -159px -54px;
+  width: 27px;
+  height: 27px;
 }
 /*!
  * Fotorama 4.6.3 | http://fotorama.io/license/
@@ -6987,6 +7272,338 @@ Icon classes can be used entirely standalone. They are named after their origina
   height: 7px;
   border: none;
   background: #f9411f;
+}
+/**
+ * Style-sheet for dtpicker
+ * https://github.com/mugifly/jquery-simple-datetimepicker
+ */
+
+.datepicker {
+	display: inline-block;
+	font: 15px/1.5 "Helvetica Neue", mplus-2c, Helvetica, Arial, "Hiragino Kaku Gothic Pro", Meiryo, sans-serif;
+	font-weight: 300;
+	border: 1px solid #dfdfdf;
+	border-radius: 3px;
+		-webkit-border-radius: 3px;  
+		-moz-border-radius: 3px;
+	box-shadow: 0.5px 0.5px 0px #c8c8c8;
+		-webkit-box-shadow: 0.5px 0.5px 3px #eeeeee;
+		-moz-box-shadow: 0.5px 0.5px 3px #eeeeee;
+}
+
+/*
+ * datepicker_header
+*/
+
+.datepicker > .datepicker_header{
+	padding-top:	2px;
+	padding-bottom: 2px;
+	padding-left:	5px;
+	padding-right: 5px;
+	background-color:	#eeeeee;
+	color: #3f3f3f;
+	text-align: center;
+	font-size: 9pt;
+	font-weight: bold;
+	user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+}
+
+.datepicker > .datepicker_header > a {
+	user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	cursor: pointer;
+	color: #3b7796;
+}
+
+.datepicker > .datepicker_header > a:hover {
+	color: #303030;
+	background-color:	#c8c8c8;
+}
+
+.datepicker > .datepicker_header > a:active {
+	color: #ffffff;
+	background-color:	#808080;
+}
+
+.datepicker > .datepicker_header > span {
+	margin-left: 20px;
+	margin-right: 20px;
+	user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+}
+
+.datepicker > .datepicker_header > .icon-home {
+	position:	absolute;
+	display:		block;
+	float:		left;
+	margin-top:	2px;
+	margin-left:	5px;
+	width:		11pt;
+	height:		11pt;
+	vertical-align: middle;
+}
+
+.datepicker > .datepicker_header > .icon-home > svg > g > path {
+	fill: #3b7796;
+}
+
+.datepicker > .datepicker_header > a:hover > svg > g > path {
+	fill: #303030; /* Icon button hover color */
+}
+
+
+/*
+ * datepicker_inner_container 
+*/
+
+.datepicker > .datepicker_inner_container {
+	margin: -2px 0px -2px 0px;
+	background-color: #d2d2d2;
+	border: 1px solid #c8c8c8;
+	border-radius: 3px;
+		-webkit-border-radius: 3px;  
+		-moz-border-radius: 3px;
+
+	box-shadow: 0.5px 0px 3px #c8c8c8;
+		-webkit-box-shadow: 0.5px 0px 3px #c8c8c8;
+		-moz-box-shadow: 0.5px 0px 3px #c8c8c8;
+}
+
+.datepicker > .datepicker_inner_container:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+
+/*
+ * datepicker_inner_container > datepicker_calendar
+*/
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar {
+	float: left;
+	width: auto;
+	
+	margin-top: -0.5px;
+	margin-left: -1px;
+	margin-bottom: -2px;
+	
+	background-color:	#ffffff;
+	border: 1px solid #c8c8c8;
+	
+	border-top:none;
+	border-top-left-radius: 3px;
+	border-bottom-left-radius: 3px;
+		-webkit-border-top-left-radius:	3px;
+		-webkit-border-bottom-left-radius: 3px;
+		-moz-border-radius-topleft:		3px;
+		-moz-border-radius-bottomleft:	3px;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > table {
+    padding: 10px;
+}
+
+/*
+ * datepicker_inner_container > datepicker_calendar > datepicker_table > tbody > tr > th (WDay-cell)
+*/
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > th {
+	color:	#646464;
+	width: 18px;
+	font-size: small;
+	font-weight: normal;
+	text-align:center;
+}
+
+/*
+ * datepicker_inner_container > datepicker_calendar > datepicker_table > tbody > tr > td (Day-cell)
+*/
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td {
+	color:	#000000;
+	font-size: small;
+	text-align:center;
+	
+	user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	cursor: pointer;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.today {
+	border-bottom: #bfbfbf solid 2px;
+	margin-bottom: -2px;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.wday_sat {
+	color:	#0044aa;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.wday_sun {
+	color:	#e13b00;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.day_another_month {
+	color:	#cccccc;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.day_in_past {
+	cursor: default;
+	color: #cccccc;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.day_in_unallowed {
+	cursor: default;
+	color: #cccccc;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.out_of_range {
+	cursor: default;
+	color: #cccccc;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.active {
+	color: #ffffff;
+	background-color:	#808080;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_calendar > .datepicker_table > tbody > tr > td.hover {
+	color: #000000;
+	background-color:	#c8c8c8;
+}
+
+/*
+ * datepicker_inner_container > datepicker_timelist
+*/
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist {
+	float: left;
+	width: 4.2em;
+	height: 118px;
+	
+	margin-top: -0.5px;
+	padding: 5px;
+	padding-left: 0px;
+	padding-right: 0px;
+	
+	overflow: auto;
+	overflow-x: hidden; 
+	
+	background-color:	#ffffff;
+	
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-border-top-right-radius:	3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright:		3px;
+	-moz-border-radius-bottomright:	3px;
+}
+
+/*
+.datepicker > .datepicker_inner_container > .datepicker_timelist::after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden;
+}
+*/
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist::-webkit-scrollbar {
+	overflow: hidden;
+	width: 6px;
+	background: #fafafa;
+	
+	border-top-right-radius: 3px;
+	border-bottom-right-radius: 3px;
+	-webkit-border-top-right-radius:	3px;
+	-webkit-border-bottom-right-radius: 3px;
+	-moz-border-radius-topright:		3px;
+	-moz-border-radius-bottomright:	3px;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist::-webkit-scrollbar:horizontal {
+	height: 1px;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist::-webkit-scrollbar-button {
+	display: none;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist::-webkit-scrollbar-piece {
+	background: #eee;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist::-webkit-scrollbar-piece:start {
+	background: #eee;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist::-webkit-scrollbar-thumb {
+	background: #aaaaaa;
+	border-radius: 3px;
+		-webkit-border-radius: 3px;  
+		-moz-border-radius: 3px;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist::-webkit-scrollbar-corner {
+	background: #333;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist > div.timelist_item {
+	padding-top:   1px;
+	padding-bottom:1px;
+	padding-left:  7px;
+	padding-right: 25px;
+	margin-top: 5px;
+	margin-bottom: 2px;
+	font-size: small;
+	
+	user-select: none;
+		-webkit-user-select: none;
+		-moz-user-select: none;
+	cursor: pointer;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist > div.timelist_item.time_in_past {
+	cursor: default;
+	color: #cccccc;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist > div.timelist_item.out_of_range {
+	cursor: default;
+	color: #cccccc;
+}
+.datepicker > .datepicker_inner_container > .datepicker_timelist > div.timelist_item.active {
+	color: #ffffff;
+	background-color:	#808080;
+}
+
+.datepicker > .datepicker_inner_container > .datepicker_timelist > div.timelist_item.hover {
+	color: #000000;
+	background-color:	#c8c8c8;
+}
+
+.datepicker {
+  -moz-box-shadow: 0.5px 0.5px 20px #c8c8c8;
+  -webkit-box-shadow: 0.5px 0.5px 20px #c8c8c8;
+  box-shadow: 0.5px 0.5px 20px #c8c8c8;
+}
+.datepicker > .datepicker_header {
+  padding: 6px;
+  background: #f8f8f8;
+}
+.datepicker .datepicker_calendar td,
+.datepicker .datepicker_calendar th {
+  padding: 5px 7px;
+}
+.datepicker .datepicker_timelist .time_in_past {
+  display: none;
 }
 /** initial setup **/
 .js-nano {
@@ -7056,6 +7673,50 @@ Icon classes can be used entirely standalone. They are named after their origina
 .js-nano > .js-nano-pane > .js-nano-slider {
   margin: 0;
 }
+.twitter-typeahead {
+  display: block !important;
+}
+.twitter-typeahead .tt-dropdown-menu {
+  display: block;
+  width: 100%;
+  max-height: 150px;
+  overflow-y: auto;
+  background: #fff;
+  border: 1px solid #a5a5a5;
+  -webkit-border-radius: 4px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 4px;
+  -moz-background-clip: padding;
+  border-radius: 4px;
+  background-clip: padding-box;
+  margin-top: 5px;
+}
+.twitter-typeahead .tt-dropdown-menu p {
+  margin-bottom: 0;
+}
+.twitter-typeahead .tt-suggestion {
+  padding: 6px 12px;
+  -webkit-border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 2px;
+  -moz-background-clip: padding;
+  border-radius: 2px;
+  background-clip: padding-box;
+}
+.twitter-typeahead .tt-suggestion:hover {
+  background: #f5f4ee;
+}
+html.touch .main-sidebar {
+  position: absolute;
+  padding-top: 0;
+}
+html.touch .main-sidebar-cart-summary {
+  position: relative;
+}
+html.touch .main-sidebar-cart .js-nano-content {
+  margin-bottom: 0;
+  top: 100px;
+}
 body {
   background: #fff;
   font-family: Arial, Tahoma, sans-serif;
@@ -7079,11 +7740,36 @@ h6,
 label {
   font-family: 'PT Sans Narrow', sans-serif;
 }
+.body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  z-index: -1;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+.body-overlay.active {
+  opacity: 1;
+  z-index: 10000;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
 .main-wrapper {
   background: #ffffff;
-  border-right: 1px solid #f8f8f8;
+  border-right: 1px solid #e5e5e5;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
   position: relative;
-  width: 1162px;
+  width: 1164px;
   display: block;
   margin-left: auto;
   margin-right: auto;
@@ -7128,9 +7814,12 @@ label {
   -webkit-box-sizing: content-box;
   -moz-box-sizing: content-box;
   box-sizing: content-box;
+  -webkit-transform: translate(0, 0);
 }
 .main-header .main-wrapper {
   background: #f8f8f8;
+  border-right: 0;
+  height: 79px;
 }
 .main-header-home {
   float: left;
@@ -7154,13 +7843,13 @@ label {
   position: relative;
   display: inline-block;
   background-image: url(spritesheet.png);
-  background-position: -64px -72px;
+  background-position: -73px -64px;
   width: 32px;
   height: 32px;
 }
 .main-header-home a:hover {
   background-image: url(spritesheet.png);
-  background-position: -32px -72px;
+  background-position: -73px -32px;
   width: 32px;
   height: 32px;
 }
@@ -7168,7 +7857,7 @@ label {
 .main-header-home a:focus {
   outline: none;
   background-image: url(spritesheet.png);
-  background-position: 0px -72px;
+  background-position: -73px 0px;
   width: 32px;
   height: 32px;
 }
@@ -7220,7 +7909,7 @@ label {
   display: inline-block;
   margin-right: 4px;
   background-image: url(spritesheet.png);
-  background-position: -173px -135px;
+  background-position: -54px -231px;
   width: 22px;
   height: 22px;
 }
@@ -7251,8 +7940,10 @@ label {
   color: #6a554f;
 }
 .main-header-buttons {
+  position: relative;
+  right: -2px;
   float: right;
-  width: 300px;
+  width: 304px;
 }
 .main-header-buttons a {
   display: block;
@@ -7260,13 +7951,16 @@ label {
   font-family: 'PT Sans Narrow', sans-serif;
   line-height: 80px;
   padding: 0 5px;
-  width: 50%;
+  width: 150px;
   text-align: center;
   border-left: 1px solid transparent;
   border-right: 1px solid transparent;
   border-bottom: 1px solid #e5e5e5;
   color: #362c26;
   font-size: 18px;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
 }
 .main-header-buttons a:hover {
   color: #6a554f;
@@ -7288,10 +7982,10 @@ label {
   border-bottom: 1px solid transparent;
 }
 .main-header-buttons .menu-button {
-  width: 45%;
+  width: 130px;
 }
 .main-header-buttons .cart-button {
-  width: 55%;
+  width: 149px;
 }
 .main-header-buttons .bm-icon {
   position: relative;
@@ -7308,7 +8002,7 @@ label {
   top: 20px;
   left: 23px;
   background-image: url(spritesheet.png);
-  background-position: -96px -72px;
+  background-position: -105px 0px;
   width: 30px;
   height: 32px;
 }
@@ -7348,26 +8042,29 @@ label {
 .main-menu ul li:last-child {
   margin-bottom: 0;
 }
-.main-menu a {
+.main-menu ul li a {
   color: #362c26;
   line-height: 28px;
 }
-.main-menu a:hover,
-.main-menu a:active,
-.main-menu a:focus {
+.main-menu ul li a:hover,
+.main-menu ul li a:active,
+.main-menu ul li a:focus {
   text-decoration: none;
 }
-.main-menu a:hover {
+.main-menu ul li a:hover {
   color: #6a554f;
 }
-.main-menu a.active,
-.main-menu a:active {
+.main-menu ul li a.active,
+.main-menu ul li a:active {
   color: #dd2a1b;
 }
-.main-menu a .bm-icon {
+.main-menu ul li a .bm-icon {
   position: relative;
   top: 6px;
   margin-right: 12px;
+}
+.main-menu ul li.active a {
+  color: #dd2a1b;
 }
 .bm-menu-title {
   color: #fff;
@@ -7447,6 +8144,14 @@ label {
 .bm-card-slider {
   padding: 0;
   overflow: hidden;
+}
+.bm-card-slider .fotorama__stage {
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
 }
 .bm-card-slider-item-photo {
   text-align: center;
@@ -7566,6 +8271,35 @@ label {
 }
 .bm-product-card {
   position: relative;
+  height: 380px;
+}
+.bm-product-card-spin-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -100;
+  opacity: 0;
+  -webkit-border-radius: 3px;
+  -webkit-background-clip: padding-box;
+  -moz-border-radius: 3px;
+  -moz-background-clip: padding;
+  border-radius: 3px;
+  background-clip: padding-box;
+  background: rgba(255, 255, 255, 0.7);
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  -o-transition: opacity 200ms;
+  transition: opacity 200ms;
+}
+.bm-product-card-spin-overlay.is-active {
+  z-index: 100;
+  opacity: 1;
+  -webkit-transition: opacity 200ms;
+  -moz-transition: opacity 200ms;
+  -o-transition: opacity 200ms;
+  transition: opacity 200ms;
 }
 .bm-product-card-image {
   position: relative;
@@ -7632,10 +8366,27 @@ label {
   text-align: center;
   height: 34px;
   line-height: 34px;
+  -webkit-transition: all 100ms;
+  -moz-transition: all 100ms;
+  -o-transition: all 100ms;
+  transition: all 100ms;
+}
+.bm-product-card-buy .btn .bm-quantity-changer {
+  display: none;
 }
 .bm-product-card-buy .btn.is-active {
+  -webkit-transition: all 100ms;
+  -moz-transition: all 100ms;
+  -o-transition: all 100ms;
+  transition: all 100ms;
   padding: 0;
   border: none;
+}
+.bm-product-card-buy .btn.is-active .bm-quantity-changer {
+  display: block;
+}
+.bm-product-card-buy .btn.is-active .btn-word {
+  display: none;
 }
 .bm-quantity-changer {
   position: relative;
@@ -7719,6 +8470,7 @@ label {
   text-align: center;
   border: none;
   border: 1px solid transparent;
+  color: #fff;
 }
 .bm-quantity-changer-input.active {
   background: #ffffff;
@@ -7738,11 +8490,13 @@ label {
 }
 .main-content {
   float: left;
-  width: 860px;
+  width: 863px;
   padding: 30px;
   background-color: #55443f;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
   position: relative;
+  border-right: 1px solid #e5e5e5;
 }
 .main-content-blank {
   background: #ffffff;
@@ -7840,7 +8594,7 @@ label {
   top: 50%;
   margin-top: -13px;
   background-image: url(spritesheet.png);
-  background-position: -200px -108px;
+  background-position: -162px -168px;
   width: 26px;
   height: 26px;
 }
@@ -7861,7 +8615,7 @@ label {
 .main-content-modal-close {
   display: inline-block;
   background-image: url(spritesheet.png);
-  background-position: -200px -134px;
+  background-position: -208px -108px;
   width: 25px;
   height: 25px;
   position: absolute;
@@ -7871,7 +8625,7 @@ label {
 }
 .main-content-modal-close:hover {
   background-image: url(spritesheet.png);
-  background-position: -200px -159px;
+  background-position: -135px -195px;
   width: 25px;
   height: 25px;
 }
@@ -7883,12 +8637,12 @@ label {
   position: fixed;
   width: 300px;
   height: 100%;
-  margin-left: 280px;
+  margin-left: 282px;
   left: 50%;
   top: 0;
   padding-top: 80px;
   background: #ffffff;
-  border-left: 1px solid #e5e5e5;
+  -webkit-transform: translate(0, 0);
 }
 .main-sidebar .sidebar-tabs {
   display: none;
@@ -7898,12 +8652,34 @@ label {
   display: block;
 }
 .main-sidebar-cart .js-nano-content {
-  top: 100px;
+  top: 30px;
+  margin-bottom: 90px;
+}
+.main-sidebar-cart .js-nano-pane {
+  z-index: 110;
+}
+.main-sidebar-cart-change {
+  width: 300px;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
+  height: 80px;
+  padding: 20px 25px;
+}
+.main-sidebar-cart-subtotal {
+  font-size: 32px;
+  padding: 0 20px 25px;
+  font-family: 'PT Sans Narrow', sans-serif;
+  border-bottom: 1px solid #e5e5e5;
+  margin-bottom: 15px;
 }
 .main-sidebar-cart-summary {
+  width: 300px;
+  position: fixed;
+  z-index: 100;
+  bottom: 0;
   background: #f5f4ee;
   padding: 20px 25px;
-  margin-bottom: 20px;
   height: 80px;
   font-size: 16px;
   font-family: 'PT Sans Narrow', sans-serif;
@@ -7978,28 +8754,28 @@ label {
 .main-sidebar-cart-quantity-minus {
   margin-right: 10px;
   background-image: url(spritesheet.png);
-  background-position: -126px -72px;
+  background-position: -76px -231px;
   width: 20px;
   height: 20px;
 }
 .main-sidebar-cart-quantity-minus:hover,
 .main-sidebar-cart-quantity-minus:focus {
   background-image: url(spritesheet.png);
-  background-position: -146px -108px;
+  background-position: -243px 0px;
   width: 20px;
   height: 20px;
 }
 .main-sidebar-cart-quantity-plus {
   margin-left: 10px;
   background-image: url(spritesheet.png);
-  background-position: -20px -186px;
+  background-position: -240px -54px;
   width: 20px;
   height: 20px;
 }
 .main-sidebar-cart-quantity-plus:hover,
 .main-sidebar-cart-quantity-plus:focus {
   background-image: url(spritesheet.png);
-  background-position: 0px -186px;
+  background-position: -245px -20px;
   width: 20px;
   height: 20px;
 }
@@ -8023,9 +8799,16 @@ label {
 .main-sidebar-cart-quantity-input:focus {
   border-color: #a49993;
 }
+.main-sidebar-cart-times {
+  padding: 0 7px;
+}
 .main-sidebar-cart-price {
   font-size: 20px;
   float: left;
+}
+.main-sidebar-cart-price small {
+  font-size: 14px;
+  color: #a49993;
 }
 .main-sidebar-cart-delete {
   display: inline-block;
@@ -8033,14 +8816,14 @@ label {
   top: 6px;
   float: right;
   background-image: url(spritesheet.png);
-  background-position: -40px -186px;
+  background-position: -108px -222px;
   width: 16px;
   height: 16px;
 }
 .main-sidebar-cart-delete:hover,
 .main-sidebar-cart-delete:focus {
   background-image: url(spritesheet.png);
-  background-position: -56px -186px;
+  background-position: -189px -162px;
   width: 16px;
   height: 16px;
   outline: none;

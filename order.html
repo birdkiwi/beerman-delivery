@@ -103,13 +103,13 @@
             <div class="form-group">
                 <label for="order-field-address" class="control-label">Адрес доставки <span class="text-danger">*</span></label>
                 <div class="col-xs-4">
-                    <input id="order-field-address" type="text" name="address" class="form-control" required placeholder="Улица" />
+                    <input id="order-field-address" type="text" name="address" class="form-control" required placeholder="Улица" data-typeahead="test/novosibirsk_streets.json" autocomplete="off" />
                 </div>
                 <div class="col-xs-2">
-                    <input type="text" name="house" class="form-control" placeholder="дом" />
+                    <input type="text" name="house" class="form-control" placeholder="дом" autocomplete="off" />
                 </div>
                 <div class="col-xs-2">
-                    <input type="text" name="flat" class="form-control" placeholder="кв" />
+                    <input type="text" name="flat" class="form-control" placeholder="кв" autocomplete="off" />
                 </div>
             </div>
             <div class="clearfix">
@@ -121,6 +121,33 @@
                     </div>
                 </div>
             </div>
+
+            <div class="form-group">
+                <label class="control-label">Способ оплаты</label>
+
+                <div class="col-xs-6">
+                    <div class="form-group">
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="payment" value="cash" checked autocomplete="off">
+                                Наличными
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="payment" value="card" autocomplete="off">
+                                Банковская карта (Visa, Mastercard, при получении)
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-xs-6">
+                        <div class="row">
+                            <input type="text" value="" name="cash-change" autocomplete="off" class="form-control input-sm" placeholder="Сдача с купюры" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div class="form-group">
                 <label for="order-field-comment" class="control-label">Примечание</label>
                 <div class="col-xs-8">
@@ -189,11 +216,19 @@
     $(document).ready(function(){
         $('input[name="time_type"]').click(function(){
             var currValue = $(this).val();
-            console.log(currValue);
             if (currValue == 'time') {
                 $('#order-time-chooser').show();
             } else {
                 $('#order-time-chooser').hide();
+            }
+        });
+
+        $('input[name="payment"]').click(function(){
+            var currValue = $(this).val();
+            if (currValue == 'cash') {
+                $('input[name="cash-change"]').attr('disabled', false);
+            } else {
+                $('input[name="cash-change"]').attr('disabled', true);
             }
         });
     });

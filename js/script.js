@@ -18,32 +18,144 @@ function animateNumberInit(element) {
 
 function initBuyButtons(element) {
     element.each(function(){
-        var button = $(this);
-        var quantityInput = button.siblings('input[name=quantity]');
-        var quantity = quantityInput.val();
-        var quantityBlock = '<div class="bm-quantity-changer">' +
-            '<span class="bm-quantity-changer-minus" data-quantity-change="minus"></span>' +
-            '<input type="text" pattern="[0-9.]+" class="bm-quantity-changer-input" data-quantity-input value="' + quantity + '">' +
-            '<span class="bm-quantity-changer-plus" data-quantity-change="plus"></span>' +
-            '</div>';
+        var button = $(this),
+            form = button.parent(),
+            maxQuantity = +button.data('buy-button-max-quantity'),
+            quantityInput = button.find('[data-quantity-input]'),
+            quantity = quantityInput.val(),
+            quantityButtons = button.find('[data-quantity-change]'),
+            overlay = button.closest('.bm-product-card').find('.bm-product-card-spin-overlay');
+
+        quantityInput.click(function() {
+            if (!$(this).hasClass('active')) {
+                $(this).addClass('active');
+                $(this).parent().addClass('is-input-active');
+                $(this).select();
+
+                $(this).on('blur', function() {
+                    $(this).removeClass('active');
+                    $(this).parent().removeClass('is-input-active');
+                });
+            }
+
+            return false;
+        });
+
+        quantityButtons.click(function() {
+            var operator = $(this).data('quantity-change');
+            var quantity = +quantityInput.val();
+
+            if (operator == 'plus') {
+                quantityInput.val(quantity+1).change();
+            } else if (operator == 'minus') {
+                quantityInput.val(quantity-1).change();
+            }
+
+            return false;
+        });
+
+        quantityInput.on('change', function() {
+            var currentQuantity = isNaN($(this).val()) ? 1 : Number($(this).val());
+            if (currentQuantity > maxQuantity) {
+                quantityInput.val(maxQuantity);
+                $('#max-quantity-warning').modal();
+            } else {
+                quantityInput.val(currentQuantity);
+            }
+
+            if (currentQuantity <= 0) {
+                $(this).val(0);
+                button.removeClass('is-active').on('click', prepareButton);
+            } else {
+                button.addClass('is-active');
+            }
+
+            overlay.addClass('is-active');
+            overlay.spin('large');
+
+            //AJAX CALL HERE
+            setTimeout(function(){
+                overlay.removeClass('is-active');
+                overlay.spin('stop');
+            }, 500);
+        });
+
+        form.on('submit', function() {
+            return false;
+        });
+
+        function prepareButton() {
+            quantityInput.val(1);
+            $(this).unbind('click');
+            quantityInput.trigger('change');
+            return false;
+        }
 
         if (quantity > 0) {
-            button.html('');
-            button.append(quantityBlock);
             button.addClass('is-active');
         } else {
-            $(this).on('click', function() {
-                if (!button.attr('disabled')) {
-                    ++quantity;
-                    quantityInput.val(quantity);
-                    initBuyButtons($(this));
-                }
-
-                $(this).unbind('click');
-
-                return false;
-            });
+            button.on('click', prepareButton);
         }
+    });
+}
+
+function bodyLoadSpin(action) {
+    overlay = $('.body-overlay');
+    if (action == 'start') {
+        overlay.addClass('active');
+        overlay.spin({
+            color: "#fff",
+            lines: 10,
+            length: 15
+        });
+    } else if (action == 'stop') {
+        overlay.spin('stop');
+        overlay.removeClass('active');
+    }
+}
+
+function initTypeahead(element) {
+    element.each(function(){
+        var substringMatcher = function(strs) {
+            return function findMatches(q, cb) {
+                var matches, substrRegex;
+                // an array that will be populated with substring matches
+                matches = [];
+                // regex used to determine if a string contains the substring `q`
+                substrRegex = new RegExp(q, 'i');
+                // iterate through the pool of strings and for any string that
+                // contains the substring `q`, add it to the `matches` array
+                $.each(strs, function(i, str) {
+                    if (substrRegex.test(str)) {
+                        // the typeahead jQuery plugin expects suggestions to a
+                        // JavaScript object, refer to typeahead docs for more info
+                        matches.push({ value: str });
+                    }
+                });
+                cb(matches);
+            };
+        };
+
+        var dataUrl = element.data('typeahead');
+
+        $.ajax({
+            url: dataUrl,
+            cache: false,
+            contentType: "application/json"
+        }).done(function( data ) {
+            if (data) {
+                element.typeahead({
+                        hint: true,
+                        highlight: true,
+                        minLength: 1
+                    },
+                    {
+                        name: 'data',
+                        displayKey: 'value',
+                        source: substringMatcher(data)
+                    });
+            }
+        });
     });
 }
 
@@ -100,19 +212,6 @@ $(window).on('scroll resize', function() {
     });
 });
 
-$(document).on('click', '[data-quantity-input]', function() {
-    if (!$(this).hasClass('active')) {
-        $(this).addClass('active');
-        $(this).parent().addClass('is-input-active');
-        $(this).select();
-
-        $(this).on('blur', function(){
-            $(this).removeClass('active');
-            $(this).parent().removeClass('is-input-active');
-        });
-    }
-});
-
 $(document).on('click', '[data-load-product-card]', function() {
     $('.main-content-modal').fadeIn();
     $('.main-content-modal').spin('large');
@@ -129,26 +228,13 @@ $(document).on('click', '[data-load-product-card]', function() {
     return false;
 });
 
-$(document).on('click', '[data-quantity-change]', function() {
-    var operator = $(this).data('quantity-change');
-    var quantityInput = $(this).siblings('[data-quantity-input]');
-    var currentQuantity = +quantityInput.val();
-
-    if (operator == 'plus') {
-        quantityInput.val(currentQuantity+1);
-    } else if (operator == 'minus') {
-        if (currentQuantity > 0) {
-            quantityInput.val(currentQuantity-1);
-        }
-    }
-});
-
 $(document).ready(function(){
     countDownInit( $('[data-countdowntimer]') );
     animateNumberInit( $('[data-animate-number]') );
     initBuyButtons( $('[data-buy-button]') );
     initQuantityChangers( $('[data-quantity-changer]') );
     initContentModal();
+    initTypeahead( $('[data-typeahead]') );
 
     $('.js-sticky').Stickyfill();
     $('.js-fotorama').fotorama();
@@ -209,6 +295,39 @@ $(document).ready(function(){
             "calendarMouseScroll": false,
             "autodateOnStart": true
         });
+    });
+
+    // CENTERED MODALS
+    // phase one - store every dialog's height
+    $('.modal').each(function () {
+        var t = $(this),
+            d = t.find('.modal-dialog'),
+            fadeClass = (t.is('.fade') ? 'fade' : '');
+        // render dialog
+        t.removeClass('fade')
+            .addClass('invisible')
+            .css('display', 'block');
+        // read and store dialog height
+        d.data('height', d.height());
+        // hide dialog again
+        t.css('display', '')
+            .removeClass('invisible')
+            .addClass(fadeClass);
+    });
+    // phase two - set margin-top on every dialog show
+    $('.modal').on('show.bs.modal', function () {
+        var t = $(this),
+            d = t.find('.modal-dialog'),
+            dh = d.data('height'),
+            w = $(window).width(),
+            h = $(window).height();
+        // if it is desktop & dialog is lower than viewport
+        // (set your own values)
+        if (w > 380 && (dh + 60) < h) {
+            d.css('margin-top', Math.round(0.96 * (h - dh) / 2));
+        } else {
+            d.css('margin-top', '');
+        }
     });
 });
 

@@ -24,6 +24,8 @@
     "jquery-animatenumber": "~0.0.10",
     "Stickyfill": "~1.1.1",
     "nanoscroller": "~0.8.4",
-    "jquery-simple-datetimepicker": "~1.12.0"
+    "jquery-simple-datetimepicker": "~1.12.0",
+    "typeahead.js": "~0.10.5",
+    "modernizr": "~2.8.3"
   }
 }

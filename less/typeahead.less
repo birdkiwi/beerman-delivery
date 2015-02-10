@@ -1,0 +1,27 @@
+.twitter-typeahead {
+  display: block !important;
+
+  .tt-dropdown-menu {
+    display: block;
+    width: 100%;
+    max-height: 150px;
+    overflow-y: auto;
+    background: #fff;
+    border: 1px solid #a5a5a5;
+    .border-radius(4px);
+    margin-top: 5px;
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .tt-suggestion {
+    padding: 6px 12px;
+    .border-radius(2px);
+
+    &:hover {
+      background: @c-main-gray;
+    }
+  }
+}

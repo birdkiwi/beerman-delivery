@@ -31,7 +31,8 @@ module.exports = function(grunt) {
             dist: {
                 src: [
                     'bower_components/jquery/dist/jquery.js',
-                    'bower_components/bootstrap/dist/bootstrap.js',
+                    'bower_components/bootstrap/dist/js/bootstrap.js',
+                    'bower_components/typeahead.js/dist/typeahead.jquery.js',
                     'bower_components/jquery.inputmask/dist/jquery.inputmask.bundle.js',
                     'bower_components/jquery-validate/dist/jquery.validate.js',
                     'bower_components/fotorama/fotorama.js',
@@ -42,6 +43,7 @@ module.exports = function(grunt) {
                     'bower_components/Stickyfill/dist/stickyfill.js',
                     'bower_components/jquery-simple-datetimepicker/jquery.simple-dtpicker.js',
                     'bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.js',
+                    'bower_components/modernizr/modernizr.js',
                     'js/script.js'
                 ],
                 dest: 'build/script.js'

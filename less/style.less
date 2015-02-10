@@ -13,6 +13,8 @@
 @import "datepicker-override.less";
 @import "../bower_components/nanoscroller/bin/css/nanoscroller.less";
 @import "nanoscroller-override.less";
+@import "typeahead.less";
+@import "media.less";
 
 body {
   background: #fff;
@@ -25,8 +27,27 @@ h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   .ff-pt-serif;
 }
+
 label {
   .ff-pt-sans-narrow;
+}
+
+.body-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  opacity: 0;
+  z-index: -1;
+  .transition(opacity, 500ms);
+
+  &.active {
+    opacity: 1;
+    z-index: 10000;
+    .transition(opacity, 500ms);
+  }
 }
 
 .main-wrapper {
@@ -69,6 +90,7 @@ label {
   z-index: 1000;
   border-bottom: 1px solid #e5e5e5;
   .box-sizing(content-box);
+  -webkit-transform: translate(0,0);
 
   .main-wrapper {
     background: #f8f8f8;
@@ -505,6 +527,25 @@ label {
   position: relative;
   height: 380px;
 
+  &-spin-overlay {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: -100;
+    opacity: 0;
+    .border-radius(3px);
+    background: rgba(255,255,255, 0.7);
+    .transition(opacity, 200ms);
+
+    &.is-active {
+      z-index: 100;
+      opacity: 1;
+      .transition(opacity, 200ms);
+    }
+  }
+
   &-image {
     position: relative;
     margin-bottom: 15px;
@@ -563,11 +604,27 @@ label {
       text-align: center;
       height: 34px;
       line-height: 34px;
+      .transition(all, 100ms);
+
+      .bm-quantity-changer {
+        display: none;
+      }
 
       &.is-active {
+        .transition(all, 100ms);
         padding: 0;
         border: none;
+
+        .bm-quantity-changer {
+          display: block;
+        }
+
+        .btn-word {
+          display: none;
+        }
       }
+
+
     }
   }
 }
@@ -671,7 +728,8 @@ label {
   width: 863px;
   padding: 30px;
   background-color: @c-main-brown;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: top center;
   position: relative;
   border-right: 1px solid #e5e5e5;
 
@@ -841,6 +899,7 @@ label {
   top: 0;
   padding-top: 80px;
   background: #ffffff;
+  -webkit-transform: translate(0,0);
 
   .sidebar-tabs {
     display: none;
