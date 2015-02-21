@@ -13,10 +13,16 @@
         <div class="modal-product-card-buy-price">
             1&thinsp;500 ₽
         </div>
-        <input type="hidden" name="product-id" value="1" />
-        <input type="hidden" name="quantity" value="0" autocomplete="off" />
-        <div class="btn btn-success" data-buy-button>
-            Заказать
+        <input type="hidden" name="product-id" value="1" autocomplete="off" />
+        <div class="bm-product-card-buy bm-product-card-buy-large">
+            <div class="btn btn-success" data-buy-button data-buy-button-max-quantity="50">
+                <div class="bm-quantity-changer">
+                    <span class="bm-quantity-changer-minus" data-quantity-change="minus"></span>
+                    <input type="text" pattern="[0-9.]+" class="bm-quantity-changer-input" name="quantity" data-quantity-input value="0" autocomplete="off">
+                    <span class="bm-quantity-changer-plus" data-quantity-change="plus"></span>
+                </div>
+                <span class="btn-word">Заказать</span>
+            </div>
         </div>
     </form>
 </div>

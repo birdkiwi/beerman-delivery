@@ -223,6 +223,7 @@ $(document).on('click', '[data-load-product-card]', function() {
         $(data).find('[data-buy-button]');
         $('.main-content-modal').spin(false);
         $('.main-content-modal-inner').html(data);
+        initBuyButtons( $('.main-content-modal').find('[data-buy-button]') );
     });
 
     return false;

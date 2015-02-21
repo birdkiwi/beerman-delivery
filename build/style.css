@@ -8388,6 +8388,35 @@ label {
 .bm-product-card-buy .btn.is-active .btn-word {
   display: none;
 }
+.bm-product-card-buy.bm-product-card-buy-large .btn {
+  font-size: 24px;
+  height: 50px;
+  line-height: 50px;
+}
+.bm-product-card-buy.bm-product-card-buy-large .bm-quantity-changer-minus,
+.bm-product-card-buy.bm-product-card-buy-large .bm-quantity-changer-plus {
+  width: 50px;
+  height: 50px;
+}
+.bm-product-card-buy.bm-product-card-buy-large .bm-quantity-changer-minus:before {
+  top: 24px;
+  left: 18px;
+  width: 16px;
+}
+.bm-product-card-buy.bm-product-card-buy-large .bm-quantity-changer-plus:before {
+  top: 24px;
+  left: 18px;
+  width: 16px;
+}
+.bm-product-card-buy.bm-product-card-buy-large .bm-quantity-changer-plus:after {
+  height: 16px;
+  left: 25px;
+  top: 16px;
+}
+.bm-product-card-buy.bm-product-card-buy-large .bm-quantity-changer-input {
+  height: 50px;
+  line-height: 50px;
+}
 .bm-quantity-changer {
   position: relative;
 }
@@ -8542,12 +8571,6 @@ label {
   font-size: 50px;
   font-family: 'PT Sans Narrow', sans-serif;
   float: left;
-}
-.modal-product-card-buy .btn {
-  float: right;
-  font-size: 24px;
-  padding-left: 20px;
-  padding-right: 20px;
 }
 .order-form .control-label {
   font-size: 18px;
