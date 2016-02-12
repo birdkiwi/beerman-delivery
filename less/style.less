@@ -14,7 +14,6 @@
 @import "../bower_components/nanoscroller/bin/css/nanoscroller.less";
 @import "nanoscroller-override.less";
 @import "typeahead.less";
-@import "media.less";
 
 body {
   background: #fff;
@@ -55,7 +54,8 @@ label {
   border-right: 1px solid #e5e5e5;
   .box-sizing(content-box);
   position: relative;
-  width: 1162 + 2px;
+  max-width: 1162 + 2px;
+  min-width: 320px;
   .center-block();
   .clearfix();
 }
@@ -96,6 +96,13 @@ label {
     background: #f8f8f8;
     border-right: 0;
     height: 79px;
+  }
+
+  &-menu-toggler {
+    display: none;
+    position: absolute;
+    left: 20px;
+    top: 18px;
   }
 
   &-home {
@@ -268,6 +275,74 @@ label {
       top: 8px;
       margin-right: 8px;
     }
+  }
+}
+
+.mobile-menu {
+  position: fixed;
+  z-index: 1010;
+  left: -290px;
+  top: 0;
+  width: 280px;
+  height: 100%;
+  overflow-y: auto;
+  background: #f1f1f1;
+  color: #362c26;
+  transition: left 300ms;
+
+  &.active {
+    left: 0;
+    transition: left 300ms;
+    box-shadow: 0 0 20px -5px rgba(0, 0, 0, 0.55);
+  }
+
+  .main-menu {
+    ul {
+      margin-left: 0;
+
+      a {
+        display: block;
+        padding-left: 20px;
+        padding-top: 3px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid #fff;
+      }
+    }
+  }
+}
+
+.mobile-menu-wrap {
+  padding-left: 20px;
+  padding-top: 15px;
+
+  .mobile-menu-toggler {
+    display: inline-block;
+    margin-top: 3px;
+  }
+
+  .main-header-phone {
+    position: relative;
+    top: -6px;
+    display: inline-block;
+    font-size: 26px;
+    margin-left: 10px;
+
+    a {
+      &:before {
+        position: relative;
+        top: 2px;
+      }
+    }
+  }
+
+  .main-header-car {
+    display: inline-block;
+    float: none;
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 10px;
+    position: relative;
+    top: -10px;
   }
 }
 
@@ -1116,3 +1191,5 @@ label {
     }
   }
 }
+
+@import "media.less";

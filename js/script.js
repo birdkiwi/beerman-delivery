@@ -230,6 +230,7 @@ $(document).on('click', '[data-load-product-card]', function() {
 });
 
 $(document).ready(function(){
+    $.fn.mobileMenu();
     countDownInit( $('[data-countdowntimer]') );
     animateNumberInit( $('[data-animate-number]') );
     initBuyButtons( $('[data-buy-button]') );

@@ -44,6 +44,7 @@ module.exports = function(grunt) {
                     'bower_components/jquery-simple-datetimepicker/jquery.simple-dtpicker.js',
                     'bower_components/nanoscroller/bin/javascripts/jquery.nanoscroller.js',
                     'bower_components/modernizr/modernizr.js',
+                    'js/mobile-menu.js',
                     'js/script.js'
                 ],
                 dest: 'build/script.js'
