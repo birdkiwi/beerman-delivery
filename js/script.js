@@ -167,13 +167,13 @@ function initQuantityChangers(element) {
 
         plusButton.click(function() {
             var currentVal = +input.val();
-            console.log(currentVal);
+            //console.log(currentVal);
             input.val(currentVal+1);
         });
 
         minusButton.click(function() {
             var currentVal = +input.val();
-            console.log(currentVal);
+            //console.log(currentVal);
             if (currentVal > 0) {
                 input.val(currentVal-1);
             }
@@ -195,21 +195,44 @@ function initQuantityChangers(element) {
 }
 
 function initContentModal() {
-    $('.main-content').append('<div class="main-content-modal"><div class="main-content-modal-inner"></div></div>');
-    $('.main-content-modal').height($(window).height() - 80);
-    $('.main-content-modal').css('top', $(window).scrollTop());
-    $('.main-content-modal').append('<a class="main-content-modal-close">');
-
-    $('.main-content-modal-close').on('click', function(){
-        $('.main-content-modal').fadeOut();
+    var $modalClose = $('<a class="main-content-modal-close">');
+    $modalClose.click(function() {
+        $(this).parent().fadeOut();
     });
+
+    var $modal = $('<div class="main-content-modal"><div class="main-content-modal-inner"></div></div>');
+
+    modalResize();
+
+    $modal.append($modalClose);
+
+    $('.main-content').append($modal);
+}
+
+function modalResize() {
+    var $submenu = $('.bm-menu-subcategories'),
+        $header = $('.main-header'),
+        headerHeight = $header.height(),
+        submenuHeight = $submenu.height(),
+        windowHeight = $(window).height(),
+        $modal = $('.main-content-modal');
+
+    if ( !$('body').hasClass('mobile') ) {
+        submenuHeight = 0;
+    }
+
+    $modal.height( windowHeight - headerHeight - submenuHeight );
+    $modal.css('top', headerHeight + submenuHeight );
 }
 
 $(window).on('scroll resize', function() {
-    $('.main-content-modal').height($(window).height() - 80);
-    $('.main-content-modal').css('top', function(){
-        return $(window).scrollTop()
-    });
+    if ($(this).width() < 1162) {
+        $('body').addClass('mobile');
+    } else {
+        $('body').removeClass('mobile');
+    }
+
+    modalResize();
 });
 
 $(document).on('click', '[data-load-product-card]', function() {
@@ -273,7 +296,6 @@ $(document).ready(function(){
         $(group).removeClass('active');
         $(element).addClass('active');
 
-        console.log($(element));
         if ($(element).hasClass('js-nano')) {
             $(element).nanoScroller({
                 paneClass: 'js-nano-pane',

@@ -41,7 +41,7 @@
         </ul>
     </div>
 </div>
-<header class="main-header clearfix js-sticky sticky">
+<header class="main-header">
     <div class="main-wrapper">
         <a href="#" class="main-header-menu-toggler" data-menu-toggler><i class="bm-icon bm-icon-menubook"></i></a>
         <div class="main-header-home">
@@ -66,7 +66,7 @@
             <a href="#sidebar-menu" class="menu-button active" data-tab=".sidebar-tabs">
                 <i class="bm-icon bm-icon-menubook"></i> Меню
             </a>
-            <a href="#sidebar-cart" class="cart-button js-main-cart" data-tab=".sidebar-tabs">
+            <a href="#sidebar-cart" class="cart-button js-main-cart" data-tab=".sidebar-tabs" onclick="$('.main-sidebar').toggleClass('active'); $(this).toggleClass('clicked');">
                 <div class="main-cart">
                         <span class="main-cart-icon">
                             <span class="main-cart-quantity">20</span>

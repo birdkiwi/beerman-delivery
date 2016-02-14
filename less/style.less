@@ -85,8 +85,13 @@ label {
 // HEADER
 
 .main-header {
-  background: #f8f8f8;
+  .clearfix;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   height: 80px;
+  background: #f8f8f8;
   z-index: 1000;
   border-bottom: 1px solid #e5e5e5;
   .box-sizing(content-box);
@@ -878,9 +883,9 @@ label {
   }
 
   &-photo {
-    height: 70%;
-    background-repeat: no-repeat;
-    background-size: contain;
+    img {
+      max-width: 100%;
+    }
   }
 
   &-desc {
@@ -898,6 +903,7 @@ label {
   &-buy {
     width: 40%;
     float: left;
+    margin-bottom: 20px;
 
     &-price {
       font-size: 50px;
@@ -911,15 +917,14 @@ label {
 
 .order-form {
   .control-label {
+    display: inline-block;
     font-size: 18px;
-    width: 150px;
-    margin-right: 20px;
-    float: left;
+    margin-bottom: 3px;
   }
   
   .form-group {
     margin-left: 0;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
   }
 
   .btn.btn-success {
@@ -975,12 +980,13 @@ label {
 .main-content-modal {
   display: none;
   background: #fff;
-  position: absolute;
-  z-index: 900;
+  position: fixed;
+  z-index: 100;
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
+  overflow-y: auto;
 
   &-close {
     display: inline-block;
