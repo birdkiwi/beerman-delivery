@@ -100,7 +100,7 @@ function initBuyButtons(element) {
 }
 
 function bodyLoadSpin(action) {
-    overlay = $('.body-overlay');
+    var overlay = $('.body-overlay');
     if (action == 'start') {
         overlay.addClass('active');
         overlay.spin({
@@ -254,6 +254,7 @@ $(document).on('click', '[data-load-product-card]', function() {
 
 $(document).ready(function(){
     $.fn.mobileMenu();
+    $.fn.cartMenu();
     countDownInit( $('[data-countdowntimer]') );
     animateNumberInit( $('[data-animate-number]') );
     initBuyButtons( $('[data-buy-button]') );

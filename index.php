@@ -5,7 +5,8 @@
     <title>Beerman — Бесплатная доставка блюд из ресторанов</title>
     <link rel="icon" type="image/png" href="favicon.png" />
     <link rel="stylesheet" href="build/style.min.css"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    <meta name="theme-color" content="#55443f">
 </head>
 <body>
 <div class="mobile-menu">
@@ -43,7 +44,11 @@
 </div>
 <header class="main-header">
     <div class="main-wrapper">
-        <a href="#" class="main-header-menu-toggler" data-menu-toggler><i class="bm-icon bm-icon-menubook"></i></a>
+        <a href="#" class="main-header-menu-toggler" data-menu-toggler>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path style="text-indent:0;text-align:start;line-height:normal;text-transform:none;block-progression:tb;-inkscape-font-specification:Bitstream Vera Sans" d="M 4 7 L 4 9 L 28 9 L 28 7 L 4 7 z M 4 15 L 4 17 L 28 17 L 28 15 L 4 15 z M 4 23 L 4 25 L 28 25 L 28 23 L 4 23 z" color="#000" overflow="visible" font-family="Bitstream Vera Sans"></path>
+            </svg>
+        </a>
         <div class="main-header-home">
             <a href="http://beerman.ru" title="Перейти на главный сайт beerman.ru"></a>
         </div>
@@ -66,7 +71,18 @@
             <a href="#sidebar-menu" class="menu-button active" data-tab=".sidebar-tabs">
                 <i class="bm-icon bm-icon-menubook"></i> Меню
             </a>
-            <a href="#sidebar-cart" class="cart-button js-main-cart" data-tab=".sidebar-tabs" onclick="$('.main-sidebar').toggleClass('active'); $(this).toggleClass('clicked');">
+            <a href="#sidebar-cart" class="cart-button js-main-cart" data-tab=".sidebar-tabs">
+                <div class="main-cart">
+                        <span class="main-cart-icon">
+                            <span class="main-cart-quantity">20</span>
+                        </span>
+                        <span class="main-cart-price js-main-cart-price">
+                            <span data-animate-number="1365" data-animate-number-speed="1200">0</span> ₽
+                        </span>
+                </div>
+            </a>
+
+            <a href="#" class="cart-button-mobile js-mobile-cart">
                 <div class="main-cart">
                         <span class="main-cart-icon">
                             <span class="main-cart-quantity">20</span>
@@ -108,7 +124,146 @@
             </ul>
         </div>
 
-        <div class="row">
+        <div class="bm-card">
+            <div class="mobile-categories">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#modal-gifts" class="mobile-categories-item" data-toggle="modal">
+                            <?php include "images/svg/cookies.svg"; ?>
+                            Завтраки
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/stroller.svg"; ?>
+                            Детское меню
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/lunch.svg"; ?>
+                            Бизнес-ланч
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/pizza.svg"; ?>
+                            Пицца/фокачча
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/sushi.svg"; ?>
+                            Суши/роллы
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/mushroom.svg"; ?>
+                            Холодные закуски
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/salads.svg"; ?>
+                            Салаты
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/prawn.svg"; ?>
+                            Закуски к пиву
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/taco.svg"; ?>
+                            Горячие закуски
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/soup.svg"; ?>
+                            Супы
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/pasta.svg"; ?>
+                            Паста, лапша, рис
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/fish.svg"; ?>
+                            Рыба и морепродукты
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/steak.svg"; ?>
+                            Мясо
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/steak.svg"; ?>
+                            Пельмени и колбаски
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/cupcake.svg"; ?>
+                            Десерты
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/cocktail.svg"; ?>
+                            Напитки
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/chilly.svg"; ?>
+                            Соусы, гарниры
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/waiter.svg"; ?>
+                            Новые блюда от шефа
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/plate-cover.svg"; ?>
+                            Банкетные блюда
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/cupcake.svg"; ?>
+                            Кальяны
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/teddy.svg"; ?>
+                            Сувениры
+                        </a>
+                    </div>
+                    <div class="col-xs-6 col-sm-4 col-lg-3">
+                        <a href="#" class="mobile-categories-item">
+                            <?php include "images/svg/gift.svg"; ?>
+                            Подарки
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row hidden-xs hidden-sm hidden-md">
             <div class="col-xs-12">
                 <div class="bm-card bm-card-slider">
                     <div class="js-fotorama" data-autoplay="10000" data-arrows="true" data-width="100%" data-ratio="32/14" data-loop="true" data-fit="cover">
@@ -580,6 +735,104 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade modal-products" id="modal-gifts" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">Выберите подарок!</h4>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="bm-card bm-product-card">
+                            <div class="bm-product-card-spin-overlay"></div>
+                            <div class="bm-product-card-image">
+                                <img src="images/temp/product-1.jpg" alt="Деревенский овощной салат Beerman"/>
+                            </div>
+                            <h3 class="bm-product-card-title">
+                                Деревенский овощной салат Beerman
+                            </h3>
+                            <p class="bm-product-card-desc">
+                                Листья салатов айсберг и романо, чесночные гренки, томаты конкассе, соус цезарь и сыр пармезан.
+                            </p>
+                            <form action="#" class="bm-product-card-buy">
+
+                                <div class="bm-product-card-buy-price">
+                                    <span class="bm-old-price">280</span> 210 ₽
+                                </div>
+                                <input type="hidden" name="product-id" value="1" autocomplete="off" />
+                                <div class="btn btn-success" data-buy-button data-buy-button-max-quantity="50">
+                                    <div class="bm-quantity-changer">
+                                        <span class="bm-quantity-changer-minus" data-quantity-change="minus"></span>
+                                        <input type="text" pattern="[0-9.]+" class="bm-quantity-changer-input" name="quantity" data-quantity-input value="0" autocomplete="off">
+                                        <span class="bm-quantity-changer-plus" data-quantity-change="plus"></span>
+                                    </div>
+                                    <span class="btn-word">Заказать</span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="bm-card bm-product-card">
+                            <div class="bm-product-card-spin-overlay"></div>
+                            <div class="bm-product-card-image">
+                                <img src="images/temp/product-2.jpg" alt="Салат с ростбифом, рукколой и сельдереем"/>
+                            </div>
+                            <h3 class="bm-product-card-title">
+                                Салат с ростбифом, рукколой и сельдереем
+                            </h3>
+                            <p class="bm-product-card-desc">
+                                Листья салатов айсберг и романо, чесночные гренки, томаты конкассе, соус цезарь и сыр пармезан.
+                            </p>
+                            <form action="#" class="bm-product-card-buy">
+
+                                <div class="bm-product-card-buy-price">
+                                    210 ₽
+                                </div>
+                                <input type="hidden" name="product-id" value="1" />
+                                <input type="hidden" name="quantity" value="10" />
+                                <div class="btn btn-success" data-buy-button>
+                                    Заказать
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-4">
+                        <div class="bm-card bm-product-card">
+                            <div class="bm-product-card-spin-overlay"></div>
+                            <div class="bm-product-card-image">
+                                <i class="bm-sticker bm-sticker-daily"></i>
+                                <img src="images/temp/product-3.jpg" alt="Салат «Цезарь» с креветками"/>
+                            </div>
+                            <h3 class="bm-product-card-title">
+                                Салат «Цезарь» с креветками
+                            </h3>
+                            <p class="bm-product-card-desc">
+                                Листья салатов айсберг и романо, чесночные гренки, томаты конкассе, соус цезарь и сыр пармезан.
+                            </p>
+                            <form action="#" class="bm-product-card-buy">
+                                <div class="bm-product-card-buy-price">
+                                    210 ₽
+                                </div>
+                                <input type="hidden" name="product-id" value="1" />
+                                <input type="hidden" name="quantity" value="0" autocomplete="off" />
+                                <div class="btn btn-success" data-buy-button>
+                                    Заказать
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div><!-- /.row -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-block btn-success" data-dismiss="modal">Готово</button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <div class="body-overlay"></div>
 <script src="build/script.js"></script>
 </body>

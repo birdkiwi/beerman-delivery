@@ -50,15 +50,16 @@ html.touch {
         }
       }
 
-      .menu-button {
+      .menu-button,
+      .cart-button {
         display: none;
       }
 
-      .cart-button {
+      .cart-button-mobile {
         width: auto;
+        display: block;
         height: 60px;
         line-height: 60px;
-        float: none;
       }
     }
 
@@ -91,10 +92,10 @@ html.touch {
     position: fixed !important;
     left: auto;
     right: -300px;
-    top: 60px;
+    top: 0;
     width: 280px;
-    height: calc(~"100% - 60px");
-    z-index: 110;
+    height: 100%;
+    z-index: 1100;
     padding-top: 0;
     margin-left: 0;
     box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.65);
@@ -108,10 +109,24 @@ html.touch {
         display: none;
       }
     }
+
+    .main-sidebar-cart {
+      display: block;
+    }
   }
 
-  .main-sidebar-cart-subtotal {
-    font-size: 24px;
+  .main-sidebar-cart {
+    .js-nano-content {
+      top: 80px;
+      margin-bottom: 0;
+      padding-top: 10px;
+    }
+  }
+
+  .main-sidebar-cart-summary {
+    position: absolute;
+    top: 0;
+    bottom: auto;
   }
 
   .main-wrapper {
@@ -121,7 +136,7 @@ html.touch {
 
   .main-content {
     width: 100%;
-    background-image: none;
+    background-image: none !important;
     padding-top: 61+46px;
     padding-left: 10px;
     padding-right: 10px;
@@ -264,6 +279,13 @@ html.touch {
         width: 100%;
         margin-bottom: 0;
       }
+    }
+  }
+
+  .mobile-categories-item {
+    svg {
+      width: 60px;
+      height: 60px;
     }
   }
 }
